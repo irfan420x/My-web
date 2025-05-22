@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Irfan's Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="https://cdn.pixabay.com/vimeo/504417072/solarflare-83444.mp4?width=1280&hash=5f4e41c38b9efc17db5e92407aa7cb67e5b5d9e4" type="video/mp4">
+  </video>
+  <header>
+    <img id="logo" src="https://telegra.ph/file/bbd2ad2d0ed8ddc44801f.jpg" alt="Profile Picture" />
+    <h1>Irfan</h1>
+    <p><a href="https://www.facebook.com/psychopath.irfan.io" target="_blank">Facebook Profile</a></p>
+    <p><a href="info.html">About Me</a> | <a href="privacy.html">Privacy Policy</a></p>
+  </header>
+  <main>
+    <h2>Contact Me via Telegram</h2>
+    <form method="POST" action="/send">
+      <label for="name">Your Name:</label>
+      <input type="text" name="name" required />
+      <label for="message">Your Message:</label>
+      <textarea name="message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <audio id="audio-player" controls autoplay loop>
+    <source src="https://ia801302.us.archive.org/31/items/witcher3bg/Witcher3bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button id="mute-button" onclick="toggleMute()">Mute</button>
+  <footer>
+    <p>&copy; 2025 Irfan. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleMute() {
+      const audio = document.getElementById('audio-player');
+      audio.muted = !audio.muted;
+    }
+  </script>
+</body>
+</html>
